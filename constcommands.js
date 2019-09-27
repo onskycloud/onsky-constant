@@ -233,11 +233,11 @@ const MISC_WORD = {
 }
 
 const ONSKYERRCODE = {
-    missing_input: 1,
-    not_string_input: 2,
-    wrong_action: 3,
-    text_not_long: 4,
-    no_device_found: 5
+    missing_input: "Missing Input",
+    not_string_input: "Input Not String",
+    wrong_action: "Invalid Action",
+    text_not_long: "Text Not Long Enough",
+    no_device_found: "No Device Found"
 }
 
 /* Unicode value for ` ' ~ ? . */
