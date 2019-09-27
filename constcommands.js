@@ -232,6 +232,14 @@ const MISC_WORD = {
     none: 'none'
 }
 
+const ONSKYERRCODE = {
+    missing_input: 1,
+    not_string_input: 2,
+    wrong_action: 3,
+    text_not_long: 4,
+    no_device_found: 5
+}
+
 /* Unicode value for ` ' ~ ? . */
 const VIMARKS = ['\u0300', '\u0301', '\u0303', '\u0309', '\u0323' ]
 
@@ -242,5 +250,6 @@ module.exports = {
   VIACTION_LEN,
   VIACTION_OBJ,
   MISC_WORD,
+  ONSKYERRCODE,
   VIMARKS
 }
