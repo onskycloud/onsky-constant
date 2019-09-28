@@ -96,7 +96,7 @@ const VIACTION_OBJ = {
         textlen_min: 3
     },
     turn_safety_off: {
-        rawtxt: ['tắt chế độ an toàn', 'đóng chế độ an toàn'
+        rawtxt: ['tắt chế độ an toàn', 'đóng chế độ an toàn',
             'tắt an toàn', 'đóng an toàn'],
         value: [ ONSKYACTION_VAL.turn_off_safety ],
         textlen_max: VIACTION_LEN.safety_action,
