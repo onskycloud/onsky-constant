@@ -34,8 +34,7 @@ const ONSKYACTION_VAL = {
     turn_off_sec: 10,
     turn_on_safety: 11,
     turn_off_safety: 12,
-    sos_command: 13,
-    none: 'none'
+    sos_command: 13
 }
 
 /* Text Length corresponding to each action in Vi */
@@ -43,10 +42,11 @@ const VIACTION_LEN = {
     light_door_action: 1,
     color_action: 2,
     dim_action: 3,
-    security_on_action: 7,
+    security_away_action: 8,
+    security_home_action: 8,
     security_off_action: 5,
-    safety_action: 4,
-    sos_action: 2
+    safety_action: 6,
+    sos_action: 3
 }
 
 /* Action Object will be:
@@ -58,32 +58,46 @@ const VIACTION_LEN = {
  */
 const VIACTION_OBJ = {
     turn_away_sec_on: {
-        rawtxt: ['bật chế độ an ninh đi xa', 'bật chế độ an ninh',
-                 'bật an ninh đi xa', 'bật an ninh'],
+        rawtxt: ['kích hoạt chế độ an ninh đi xa', 'bật chế độ an ninh đi xa', 'mở chế độ an ninh đi xa',
+             'bật an ninh đi ra ngoài', 'mở an ninh đi ra ngoài', 'kích hoạt an ninh đi ra ngoài',
+             'bật an ninh vắng nhà', 'mở an ninh vắng nhà', 'kích hoạt an ninh vắng nhà',
+             'bật an ninh đi xa', 'mở an ninh đi xa', 'kích hoạt an ninh đi xa',
+             'bật an ninh ra ngoài', 'mở an ninh ra ngoài', 'kích hoạt an ninh ra ngoài',
+             'bật an ninh tuyệt đối', 'mở an ninh tuyệt đối', 'kích hoạt an ninh tuyệt đối',
+             'bật an ninh toàn bộ', 'mở an ninh toàn bộ', 'kích hoạt an ninh toàn bộ',
+             'bật chế độ an ninh','mở chế độ an ninh', 'kích hoạt chế độ an ninh',
+             'bật an ninh', 'mở an ninh', 'kích hoạt an ninh'],
         value: [ ONSKYACTION_VAL.turn_on_away_sec ],
-        textlen_max: VIACTION_LEN.security_on_action,
+        textlen_max: VIACTION_LEN.security_away_action,
         textlen_min: 3
     },
     turn_home_sec_on: {
-        rawtxt: ['bật chế độ an ninh ở nhà', 'bật an ninh ở nhà'],
+        rawtxt: ['kích hoạt chế độ an ninh ở nhà', 'bật chế độ an ninh ở nhà', 'bật an ninh ở nhà',
+            'bật an ninh ở nhà', 'mở an ninh ở nhà', 'kích hoạt an ninh ở nhà',
+            'bật an ninh trong nhà', 'mở an ninh trong nhà', 'kích hoạt an ninh trong nhà',
+            'bật an ninh khu vực', 'mở an ninh khu vực', 'kích hoạt an ninh khu vực',
+            'bật an ninh trong phòng', 'mở an ninh trong phòng', 'kích hoạt an ninh trong phòng'],
         value: [ ONSKYACTION_VAL.turn_on_home_sec ],
-        textlen_max: VIACTION_LEN.security_on_action,
+        textlen_max: VIACTION_LEN.security_home_action,
         textlen_min: 4
     },
     turn_sec_off: {
-        rawtxt: [ 'tắt chế độ an ninh', 'tắt an ninh'],
+        rawtxt: [ 'tắt chế độ an ninh', 'đóng chế độ an ninh',
+            'tắt an ninh', 'đóng an ninh'],
         value: [ ONSKYACTION_VAL.turn_off_sec ],
         textlen_max: VIACTION_LEN.security_off_action,
         textlen_min: 3
     },
     turn_safety_on: {
-        rawtxt: ['bật chế độ an toàn', 'bật an toàn'],
+        rawtxt: ['bật chế độ an toàn', 'mở chế độ an toàn', 'kích hoạt chế độ an toàn',
+            'bật an toàn', 'mở an toàn', 'kích hoạt an toàn'],
         value: [ ONSKYACTION_VAL.turn_on_safety ],
         textlen_max: VIACTION_LEN.safety_action,
         textlen_min: 3
     },
     turn_safety_off: {
-        rawtxt: ['tắt chế độ an toàn', 'tắt an toàn'],
+        rawtxt: ['tắt chế độ an toàn', 'đóng chế độ an toàn'
+            'tắt an toàn', 'đóng an toàn'],
         value: [ ONSKYACTION_VAL.turn_off_safety ],
         textlen_max: VIACTION_LEN.safety_action,
         textlen_min: 3
@@ -107,7 +121,8 @@ const VIACTION_OBJ = {
         textlen_min: 2
     },
     sos: {
-        rawtxt: ['cứu tôi', 'sos', 'cấp cứu'],
+        rawtxt: ['gọi cấp cứu', 'cứu thương', 'cứu tôi',
+        'cấp cứu', 'cứu mạng', 'khẩn cấp', 'sos', 'cứu', 'cướp'],
         value: [ ONSKYACTION_VAL.sos_command ],
         textlen_max: VIACTION_LEN.sos_action,
         textlen_min: 1
@@ -123,8 +138,7 @@ const VIACTION_OBJ = {
         value: [ONSKYACTION_VAL.turn_off_light, ONSKYACTION_VAL.close_door],
         textlen_max: VIACTION_LEN.light_door_action,
         textlen_min: 1
-    },
-    none: 'none'
+    }
 }
 
 /* Text Length corresponding to each action in En */
@@ -223,13 +237,7 @@ const ENACTION_OBJ = {
         value: [ ONSKYACTION_VAL.close_door ],
         textlen_max: ENACTION_LEN.door_action,
         textlen_min: 1
-    },
-    none: 'none'
-}
-
-const MISC_WORD = {
-    mode: 'chế độ',
-    none: 'none'
+    }
 }
 
 const ONSKYERRCODE = {
@@ -249,7 +257,6 @@ module.exports = {
   ENACTION_OBJ,
   VIACTION_LEN,
   VIACTION_OBJ,
-  MISC_WORD,
   ONSKYERRCODE,
   VIMARKS
 }
