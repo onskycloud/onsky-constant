@@ -58,8 +58,8 @@ const VIACTION_LEN = {
  */
 const VIACTION_OBJ = {
     turn_away_sec_on: {
-        rawtxt: ['kích hoạt chế độ an ninh đi xa', 'bật chế độ an ninh đi xa', 'mở chế độ an ninh đi xa',
-            'kích hoạt chế độ an ninh đang đi xa', 'bật chế độ an ninh đang đi xa', 'mở chế độ an ninh đang đi xa',
+        rawtxt: [ 'kích hoạt chế độ an ninh đang đi xa', 'bật chế độ an ninh đang đi xa', 'mở chế độ an ninh đang đi xa',
+            'kích hoạt chế độ an ninh đi xa', 'bật chế độ an ninh đi xa', 'mở chế độ an ninh đi xa',
             'bật an ninh đi ra ngoài', 'mở an ninh đi ra ngoài', 'kích hoạt an ninh đi ra ngoài',
             'bật an ninh đang đi xa', 'mở an ninh đang đi xa', 'kích hoạt an ninh đang đi xa',
             'bật an ninh đang vắng nhà', 'mở an ninh đang vắng nhà', 'kích hoạt an ninh đang vắng nhà',
