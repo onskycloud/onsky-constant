@@ -80,7 +80,7 @@ const VIACTION_OBJ = {
             'kích hoạt chế độ an ninh ở nhà', 'bật chế độ an ninh ở nhà', 'bật an ninh ở nhà',
             'bật an ninh đang ở nhà', 'mở an ninh đang ở nhà', 'kích hoạt an ninh đang ở nhà',
             'bật an ninh đang trong nhà', 'mở an ninh đang trong nhà', 'kích hoạt an ninh đang trong nhà',
-            'bật an ninh đang trong phòng', 'mở an ninh đang trong phòng', 'kích hoạt an ninh đang trong phòng'],
+            'bật an ninh đang trong phòng', 'mở an ninh đang trong phòng', 'kích hoạt an ninh đang trong phòng',
             'bật an ninh ở nhà', 'mở an ninh ở nhà', 'kích hoạt an ninh ở nhà',
             'bật an ninh trong nhà', 'mở an ninh trong nhà', 'kích hoạt an ninh trong nhà',
             'bật an ninh khu vực', 'mở an ninh khu vực', 'kích hoạt an ninh khu vực',
