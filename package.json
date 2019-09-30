@@ -1,6 +1,6 @@
 {
   "name": "onsky-constant",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "ONSKY Constant for nlp.",
   "main": "index.js",
   "scripts": {
