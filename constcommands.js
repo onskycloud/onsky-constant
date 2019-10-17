@@ -77,14 +77,14 @@ const VIACTION_OBJ = {
     },
     turn_home_sec_on: {
         rawtxt: [ 'kích hoạt chế độ an ninh đang ở nhà', 'thiết lập chế độ an ninh đang ở nhà', 'bật chế độ an ninh đang ở nhà', 'bật an ninh đang ở nhà',
+            'Mở chế độ an ninh đang ở nhà', 'Mở chế độ an ninh ở nhà', 'kích hoạt an ninh khu vực', 'thiết lập an ninh khu vực','bật an ninh khu vực', 'mở an ninh khu vực',
             'kích hoạt an ninh đang trong nhà', 'thiết lập an ninh đang trong nhà','bật an ninh đang trong nhà', 'mở an ninh đang trong nhà',
             'kích hoạt an ninh đang trong phòng', 'thiết lập an ninh đang trong phòng','bật an ninh đang trong phòng', 'mở an ninh đang trong phòng',
             'kích hoạt an ninh đang ở nhà', 'thiết lập an ninh đang ở nhà', 'bật an ninh đang ở nhà', 'mở an ninh đang ở nhà',
             'kích hoạt chế độ an ninh ở nhà', 'thiết lập chế độ an ninh ở nhà', 'bật chế độ an ninh ở nhà', 
             'kích hoạt an ninh ở nhà', 'thiết lập an ninh ở nhà','bật an ninh ở nhà', 'mở an ninh ở nhà',
             'kích hoạt an ninh trong nhà', 'thiết lập an ninh trong nhà', 'bật an ninh trong nhà', 'mở an ninh trong nhà',
-            'kích hoạt an ninh trong phòng', 'thiết lập an ninh trong phòng', 'bật an ninh trong phòng', 'mở an ninh trong phòng',
-            'kích hoạt an ninh khu vực', 'thiết lập an ninh khu vực','bật an ninh khu vực', 'mở an ninh khu vực','Mở chế độ an ninh đang ở nhà','Mở chế độ an ninh ở nhà'],
+            'kích hoạt an ninh trong phòng', 'thiết lập an ninh trong phòng', 'bật an ninh trong phòng', 'mở an ninh trong phòng'],
         value: [ ONSKYACTION_VAL.turn_on_home_sec ],
         textlen_max: VIACTION_LEN.security_home_action,
         textlen_min: 4
@@ -111,16 +111,18 @@ const VIACTION_OBJ = {
         textlen_min: 3
     },
     dim_up: {
-        rawtxt: ['tăng ánh sáng', 'tăng độ sáng'],
+        rawtxt: ['tăng ánh sáng', 'tăng độ sáng',
+            'tăng'],
         value: [ ONSKYACTION_VAL.dim_brightness_up ],
         textlen_max: VIACTION_LEN.dim_action,
-        textlen_min: 3
+        textlen_min: 1
     },
     dim_down: {
-        rawtxt: ['giảm ánh sáng', 'giảm độ sáng'],
-        value: [ ONSKYACTION_VAL.dim_brightness_up ],
+        rawtxt: ['giảm ánh sáng', 'giảm độ sáng',
+            'làm mờ', 'giảm'],
+        value: [ ONSKYACTION_VAL.dim_brightness_down],
         textlen_max: VIACTION_LEN.dim_action,
-        textlen_min: 3
+        textlen_min: 1
     },
     change_color: {
         rawtxt: ['đổi màu', 'thay màu'],
